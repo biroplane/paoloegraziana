@@ -62,9 +62,10 @@ const options = ref({
       direction: 'bottom',
       enable: true,
       // outMode: 'bounce',
+      angle: { offset: 45, value: 5 },
       random: true,
       speed: 6,
-      straight: false
+      straight: false,
     },
     number: {
       density: {
@@ -85,6 +86,39 @@ const options = ref({
     size: {
       random: true,
       value: 15
+    },
+    tilt: {
+      direction: "random",
+      enable: true,
+      move: true,
+      value: {
+        min: 0,
+        max: 360
+      },
+      animation: {
+        enable: true,
+        speed: 60
+      }
+    },
+    roll: {
+      darken: {
+        enable: true,
+        value: 25
+      },
+      enable: true,
+      speed: {
+        min: 15,
+        max: 25
+      }
+    },
+    wobble: {
+      distance: 30,
+      enable: true,
+      move: true,
+      speed: {
+        min: -15,
+        max: 15
+      }
     }
   },
   detectRetina: true

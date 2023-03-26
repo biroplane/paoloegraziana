@@ -10,8 +10,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      container:{
+        center:true
+      },
       colors:{
-        "salvia": {
+        "primary": {
           50: "#F8F9F5",
           100: "#EEF2E9",
           200: "#DDE4D3",

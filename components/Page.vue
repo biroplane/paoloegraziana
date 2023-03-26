@@ -1,5 +1,13 @@
+<script setup>
+defineProps({
+  half:{
+    type:Boolean,
+    default:false
+  }
+})
+</script>
 <template>
-  <article class="h-screen  flex items-center justify-center" v-bind="$attrs">
+  <article class="flex items-center justify-center " :class="[half ? 'h-[50vh]': 'h-screen']" v-bind="$attrs">
     <slot />
   </article>
 </template>
