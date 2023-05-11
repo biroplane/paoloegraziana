@@ -54,12 +54,12 @@ input {
     &:invalid,
     &:invalid:focus,
     &:invalid:not(:required):focus {
-      outline: 1px solid theme('colors.red.700');
-      box-shadow: 0 0 8px 0 rgba(255, 39, 68, 0.5);
+
+
       text-decoration: line-through;
 
 
-      @apply bg-red-200;
+
     }
     &:disabled {
       @apply text-neutral-100;

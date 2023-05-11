@@ -5,6 +5,8 @@ import { useSupabase } from "~~/composables/useSupabase"
   let page
   const body = await readBody(event)
   const supabase = useSupabase()
+  const query = getQuery(event)
+
   try {
 
 
@@ -12,7 +14,7 @@ import { useSupabase } from "~~/composables/useSupabase"
     // console.log("Found",found)
     // if(!found.data?.length>0){
 
-     page = await supabase.from('guests').insert(body)
+     page = await supabase.from('guests').update(body).eq('email',query.e)
 
     // }
 
