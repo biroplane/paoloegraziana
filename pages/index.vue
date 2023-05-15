@@ -21,66 +21,37 @@ const weddingDate = new Intl.DateTimeFormat('it-IT', { day: "numeric", month: "l
 
     </Page>
     <Page>
-      <div class="flex w-full container h-2/3 flex-col md:flex-row">
-        <div class="md:w-2/3 bg-primary-700 p-12 flex flex-col justify-center  ">
+      <div class="flex w-full container h-2/3 flex-col lg:flex-row">
+        <div class="lg:w-2/3 bg-primary-700 p-12 flex flex-col justify-center  ">
           <div class="inclinato -mt-12">
             <h2 class="text-7xl text-primary-100 capitalize stroke-primary-500" v-motion-fade-visible>{{ weddingDate }}</h2>
           </div>
-          <p class="mt-12" v-motion-fade-visible> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore eos distinctio quaerat omnis
-            accusantium magni corporis ullam cupiditate nam, quas officiis quibusdam animi consequatur aliquid ab expedita
-            vel odio.</p>
+          <div class="text-white">
+            <p class="mt-12" v-motion-fade-visible>Finalmente ce l'abbiamo fatta! 🎉</p>
+            <p class="my-4" v-motion-fade-visible>Siamo lietissimi di annunciare il nostro matrimonio.</p>
+            <p class="mb-12" v-motion-fade-visible>Per rendelo speciale, manchi solo tu. Vuoi venire al nostro mastrimonio?</p>
+          </div>
 
           <div class="flex w-full mt-6 gap-8">
             <NuxtLink to="/yes" v-motion :initial="{ y: -100, opacity: .3 }" :visible="{ y: 0, opacity: 1 }"
               :enter="{ y: 0, opacity: 1 }"
-              class="w-48 text-center py-3 border border-primary-500 text-primary-900 bg-primary-50 bg-opacity-20 hover:bg-primary-500 transition-colors"
+              class="w-48 text-center text-white py-3 border border-primary-500 text-primary-900 bg-primary-50 bg-opacity-20 hover:bg-primary-500 transition-colors"
               >
               SI 🎉</NuxtLink>
             <NuxtLink to="/no" v-motion :initial="{ y: 50, opacity: .3, transition: { duration: 2000 } }"
               :visible="{ y: 0, opacity: 1 }" :enter="{ x: 0, opacity: 1 }" :delay="200"
-              class="w-48 text-center py-3  text-primary-900 bg-primary-600 bg-opacity-20 hover:bg-primary-600 transition-colors"
+              class="w-48 text-center py-3 text-white  text-primary-900 bg-primary-600 bg-opacity-20 hover:bg-primary-600 transition-colors"
               >
               NO 😔</NuxtLink>
           </div>
         </div>
-        <div class="md:w-1/3">
-          <img src="/img/couple.jpg" class="object-cover w-full h-full">
+        <div class="lg:w-1/3">
+          <img src="/img/couple.jpeg" class="object-cover w-full h-full">
         </div>
       </div>
-      <!-- <div class="inclinato">
-        <h2 class="text-5xl capitalize" v-motion-fade-visible>{{ weddingDate }}</h2>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-        <div class="col-span-full">Vuoi venire al nostro matrimonio?</div>
-        <NuxtLink to="/yes" v-motion :initial="{ y: -100, opacity: .3 }" :visible="{ y: 0, opacity: 1 }"
-          :enter="{ y: 0, opacity: 1 }"
-          class="flex items-center justify-center border-2 rounded-sm aspect-square border-primary-700 hover:bg-primary-300">
-          SI</NuxtLink>
-        <NuxtLink to="/no" v-motion :initial="{ y: 50, opacity: .3, transition: { duration: 2000 } }"
-          :visible="{ y: 0, opacity: 1 }" :enter="{ x: 0, opacity: 1 }" :delay="200"
-          class="flex items-center justify-center border-2 rounded-sm aspect-square border-primary-700 hover:bg-primary-300">
-          NO</NuxtLink>
-      </div> -->
+     
     </Page>
-    <!-- <Page center>
-      <div class="grid w-full h-full md:grid-cols-2">
-        <div class="relative w-full h-[50vh] p-4 overflow-hidden md:p-16 bg-primary-700">
-          <div class="">
-            <h2 class="text-5xl md:text-7xl">{{ wedding.groom }}</h2>
-            <div
-              class="absolute h-[120%] border-4 rounded-full border-primary-100 aspect-square bg-primary-500 -right-40 top-0 float-right">
-              <img src="/img/groom.png" class="object-contain w-full h-full"></div>
-
-          </div>
-        </div>
-        <div class="relative w-full h-[50vh] p-4 overflow-hidden md:p-16 bg-primary-200">
-          <h2 class="text-5xl text-right md:text-7xl">{{ wedding.bride }}</h2>
-          <div
-            class="absolute h-[120%] border-4 rounded-full border-primary-100 aspect-square bg-primary-500 -left-40 top-0 float-right ">
-            <img src="/img/bride.png" class="object-contain w-full h-full"></div>
-        </div>
-      </div>
-    </Page> -->
+    
     <Page>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3004.7734603195822!2d16.4844934642779!3d41.139471111383635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1683784467341!5m2!1sit!2sit"
